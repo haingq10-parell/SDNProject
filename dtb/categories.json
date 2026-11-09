@@ -1,0 +1,46 @@
+[
+  {
+    "_id": { "$oid": "65bb00000000000000000001" },
+    "name": "IC",
+    "slug": "ic",
+    "description": "Các mạch tích hợp thông dụng",
+    "parent": null,
+    "isActive": true,
+    "createdAt": { "$date": "2026-10-01T08:00:00.000Z" },
+    "updatedAt": { "$date": "2026-10-01T08:00:00.000Z" },
+    "__v": 0
+  },
+  {
+    "_id": { "$oid": "65bb00000000000000000002" },
+    "name": "Điện trở & Tụ điện",
+    "slug": "dien-tro-tu-dien",
+    "description": "Linh kiện thụ động cho mạch điện",
+    "parent": null,
+    "isActive": true,
+    "createdAt": { "$date": "2026-10-01T08:05:00.000Z" },
+    "updatedAt": { "$date": "2026-10-01T08:05:00.000Z" },
+    "__v": 0
+  },
+  {
+    "_id": { "$oid": "65bb00000000000000000003" },
+    "name": "Vi điều khiển & Module",
+    "slug": "vi-dieu-khien-module",
+    "description": "Board phát triển và module giao tiếp",
+    "parent": null,
+    "isActive": true,
+    "createdAt": { "$date": "2026-10-01T08:10:00.000Z" },
+    "updatedAt": { "$date": "2026-10-01T08:10:00.000Z" },
+    "__v": 0
+  },
+  {
+    "_id": { "$oid": "65bb00000000000000000004" },
+    "name": "Cảm biến",
+    "slug": "cam-bien",
+    "description": "Cảm biến đo lường và phát hiện",
+    "parent": null,
+    "isActive": true,
+    "createdAt": { "$date": "2026-10-01T08:15:00.000Z" },
+    "updatedAt": { "$date": "2026-10-01T08:15:00.000Z" },
+    "__v": 0
+  }
+]

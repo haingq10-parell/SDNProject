@@ -1,0 +1,38 @@
+[
+  {
+    "_id": { "$oid": "65cc00000000000000000001" },
+    "name": "Texas Instruments",
+    "slug": "texas-instruments",
+    "country": "USA",
+    "createdAt": { "$date": "2026-10-01T08:00:00.000Z" },
+    "updatedAt": { "$date": "2026-10-01T08:00:00.000Z" },
+    "__v": 0
+  },
+  {
+    "_id": { "$oid": "65cc00000000000000000002" },
+    "name": "Microchip",
+    "slug": "microchip",
+    "country": "USA",
+    "createdAt": { "$date": "2026-10-01T08:05:00.000Z" },
+    "updatedAt": { "$date": "2026-10-01T08:05:00.000Z" },
+    "__v": 0
+  },
+  {
+    "_id": { "$oid": "65cc00000000000000000003" },
+    "name": "Arduino",
+    "slug": "arduino",
+    "country": "Italy",
+    "createdAt": { "$date": "2026-10-01T08:10:00.000Z" },
+    "updatedAt": { "$date": "2026-10-01T08:10:00.000Z" },
+    "__v": 0
+  },
+  {
+    "_id": { "$oid": "65cc00000000000000000004" },
+    "name": "Espressif",
+    "slug": "espressif",
+    "country": "China",
+    "createdAt": { "$date": "2026-10-01T08:15:00.000Z" },
+    "updatedAt": { "$date": "2026-10-01T08:15:00.000Z" },
+    "__v": 0
+  }
+]

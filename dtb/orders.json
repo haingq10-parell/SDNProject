@@ -1,0 +1,83 @@
+[
+  {
+    "_id": { "$oid": "65ff00000000000000000001" },
+    "orderCode": "DH20261109-0001",
+    "user": { "$oid": "65aa00000000000000000002" },
+    "items": [
+      {
+        "product": { "$oid": "65dd00000000000000000001" },
+        "name": "IC định thời NE555P DIP-8",
+        "sku": "IC-NE555P",
+        "price": 5000,
+        "quantity": 10
+      },
+      {
+        "product": { "$oid": "65dd00000000000000000006" },
+        "name": "Điện trở 1/4W 10K ±5% (gói 100 cái)",
+        "sku": "RES-10K-100",
+        "price": 8000,
+        "quantity": 2
+      }
+    ],
+    "shippingAddress": {
+      "fullName": "Nguyễn Văn An",
+      "phone": "0900000002",
+      "province": "Thành phố Hồ Chí Minh",
+      "district": "Quận 1",
+      "ward": "Phường Bến Nghé",
+      "street": "12 Nguyễn Huệ"
+    },
+    "itemsTotal": 66000,
+    "shippingFee": 30000,
+    "discount": 0,
+    "totalPrice": 96000,
+    "paymentMethod": "cod",
+    "paymentStatus": "pending",
+    "status": "pending",
+    "note": "Gọi trước khi giao hàng",
+    "createdAt": { "$date": "2026-11-09T08:00:00.000Z" },
+    "updatedAt": { "$date": "2026-11-09T08:00:00.000Z" },
+    "__v": 0
+  },
+  {
+    "_id": { "$oid": "65ff00000000000000000002" },
+    "orderCode": "DH20261108-0002",
+    "user": { "$oid": "65aa00000000000000000003" },
+    "items": [
+      {
+        "product": { "$oid": "65dd00000000000000000004" },
+        "name": "Arduino Uno R3",
+        "sku": "BRD-UNOR3",
+        "price": 165000,
+        "quantity": 1
+      },
+      {
+        "product": { "$oid": "65dd00000000000000000007" },
+        "name": "Cảm biến nhiệt độ độ ẩm DHT22",
+        "sku": "SNS-DHT22",
+        "price": 95000,
+        "quantity": 2
+      }
+    ],
+    "shippingAddress": {
+      "fullName": "Trần Thị Bình",
+      "phone": "0900000003",
+      "province": "Thành phố Hà Nội",
+      "district": "Quận Cầu Giấy",
+      "ward": "Phường Dịch Vọng",
+      "street": "25 Xuân Thủy"
+    },
+    "itemsTotal": 355000,
+    "shippingFee": 30000,
+    "discount": 0,
+    "totalPrice": 385000,
+    "paymentMethod": "momo",
+    "paymentStatus": "paid",
+    "paidAt": { "$date": "2026-11-08T11:00:00.000Z" },
+    "status": "shipping",
+    "note": "Giao giờ hành chính",
+    "createdAt": { "$date": "2026-11-08T10:00:00.000Z" },
+    "updatedAt": { "$date": "2026-11-08T11:00:00.000Z" },
+    "__v": 0
+  }
+]

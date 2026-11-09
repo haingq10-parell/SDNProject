@@ -1,0 +1,63 @@
+[
+  {
+    "_id": { "$oid": "65aa00000000000000000001" },
+    "name": "Admin ElectroShop",
+    "email": "admin@shop.local",
+    "password": "$2a$10$N9qo8uLOickgx2ZMRZoMyeIjZAgcfl7p92ldGxad68LJZdL17lhWy",
+    "phone": "0900000001",
+    "role": "admin",
+    "addresses": [],
+    "isActive": true,
+    "createdAt": { "$date": "2026-10-01T08:00:00.000Z" },
+    "updatedAt": { "$date": "2026-10-01T08:00:00.000Z" },
+    "__v": 0
+  },
+  {
+    "_id": { "$oid": "65aa00000000000000000002" },
+    "name": "Nguyễn Văn An",
+    "email": "customer@shop.local",
+    "password": "$2a$10$N9qo8uLOickgx2ZMRZoMyeIjZAgcfl7p92ldGxad68LJZdL17lhWy",
+    "phone": "0900000002",
+    "role": "customer",
+    "addresses": [
+      {
+        "_id": { "$oid": "65ab00000000000000000001" },
+        "fullName": "Nguyễn Văn An",
+        "phone": "0900000002",
+        "province": "Thành phố Hồ Chí Minh",
+        "district": "Quận 1",
+        "ward": "Phường Bến Nghé",
+        "street": "12 Nguyễn Huệ",
+        "isDefault": true
+      }
+    ],
+    "isActive": true,
+    "createdAt": { "$date": "2026-10-02T09:00:00.000Z" },
+    "updatedAt": { "$date": "2026-10-02T09:00:00.000Z" },
+    "__v": 0
+  },
+  {
+    "_id": { "$oid": "65aa00000000000000000003" },
+    "name": "Trần Thị Bình",
+    "email": "binh@shop.local",
+    "password": "$2a$10$N9qo8uLOickgx2ZMRZoMyeIjZAgcfl7p92ldGxad68LJZdL17lhWy",
+    "phone": "0900000003",
+    "role": "customer",
+    "addresses": [
+      {
+        "_id": { "$oid": "65ab00000000000000000002" },
+        "fullName": "Trần Thị Bình",
+        "phone": "0900000003",
+        "province": "Thành phố Hà Nội",
+        "district": "Quận Cầu Giấy",
+        "ward": "Phường Dịch Vọng",
+        "street": "25 Xuân Thủy",
+        "isDefault": true
+      }
+    ],
+    "isActive": true,
+    "createdAt": { "$date": "2026-10-03T10:00:00.000Z" },
+    "updatedAt": { "$date": "2026-10-03T10:00:00.000Z" },
+    "__v": 0
+  }
+]
