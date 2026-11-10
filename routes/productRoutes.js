@@ -11,6 +11,7 @@ router.route('/')
   .post(admin, product.create);
 
 router.get('/slug/:slug', product.getBySlug);
+router.get('/admin', admin, product.getAllAdmin);
 
 router.route('/:id')
   .get(product.getOne)

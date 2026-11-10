@@ -87,6 +87,23 @@ exports.getAll = asyncHandler(async (req, res) => {
   res.json({ success: true, ...pageMeta(total, page, limit), count: products.length, data: products });
 });
 
+// GET /api/products/admin (admin, includes inactive products)
+exports.getAllAdmin = asyncHandler(async (req, res) => {
+  const q = asString(req.query.q);
+  const filter = {};
+  if (q && q.trim()) {
+    const re = new RegExp(escapeRegex(q.trim()), 'i');
+    filter.$or = [{ name: re }, { partNumber: re }, { sku: re }, { tags: re }];
+  }
+
+  const { page, limit, skip } = getPagination(req.query);
+  const [products, total] = await Promise.all([
+    Product.find(filter).populate(POPULATE).sort(SORTS.newest).skip(skip).limit(limit),
+    Product.countDocuments(filter)
+  ]);
+  res.json({ success: true, ...pageMeta(total, page, limit), count: products.length, data: products });
+});
+
 // GET /api/products/:id
 exports.getOne = asyncHandler(async (req, res) => {
   const product = await Product.findOne({ _id: req.params.id, isActive: true }).populate(POPULATE);
