@@ -190,6 +190,12 @@ input[type=checkbox], input[type=radio] { accent-color: var(--accent); }
 .form-grid input, .form-grid select, .form-grid textarea, .stack-form input, .stack-form select, .stack-form textarea, .checkout-form input, .checkout-form textarea, .review-form textarea, .review-form select { width: 100%; min-height: 37px; padding: 9px 10px; color: var(--text); font-size: 11px; }
 .form-grid textarea, .stack-form textarea, .checkout-form textarea, .review-form textarea { resize: vertical; }
 .span-2 { grid-column: span 2; }
+.product-field-list { min-width: 0; padding: 14px; border: 1px solid #293643; border-radius: 6px; background: #0c131c; }
+.product-field-list-heading { display: flex; justify-content: space-between; align-items: center; gap: 12px; margin-bottom: 12px; }
+.product-field-list-heading h3 { margin: 0; color: var(--text); font: 600 13px var(--heading); }
+.product-field-list-heading p, .empty-product-fields { margin: 5px 0 0; color: #8290a1; font-size: 10px; }
+.product-field-row { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) auto; align-items: end; gap: 10px; margin-top: 10px; }
+.remove-field-button { min-height: 37px; }
 .checkout-layout .checkout-form > label { margin-top: 14px; }
 .form-section-title { padding-top: 20px; border-top: 1px solid #25313d; margin-top: 23px !important; }
 .payment-options { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin: 17px 0; }
@@ -250,6 +256,8 @@ input[type=checkbox], input[type=radio] { accent-color: var(--accent); }
 .admin-content .page-title { margin: 10px 0 28px; }
 .live-indicator { color: #8e9b9c; font: 9px var(--mono); }
 .stats-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; margin-bottom: 20px; }
+.revenue-stats { grid-template-columns: repeat(2, minmax(0, 1fr)); max-width: 720px; }
+.paid-orders-section { margin-top: 24px; }
 .stat-card { min-height: 122px; padding: 16px; display: flex; flex-direction: column; align-items: flex-start; gap: 8px; border: 1px solid #263340; border-radius: 6px; background: #101720; }
 .stat-card span { color: #919eaa; font-size: 10px; }
 .stat-card b { color: var(--accent); font: 600 25px var(--heading); }
@@ -279,6 +287,7 @@ tbody tr:hover { background: rgba(255,255,255,.018); }
 .row-actions button:hover, .entity-actions button:hover { color: var(--accent); }
 .table-select { max-width: 135px; padding: 6px 7px; font-size: 9px; }
 .table-user .avatar { width: 25px; height: 25px; }
+.user-detail-button { color: var(--accent); white-space: nowrap; }
 .toggle { width: 32px; height: 18px; padding: 2px; vertical-align: middle; border: 1px solid #48515e; border-radius: 20px; background: #2a323b; cursor: pointer; }
 .toggle span { width: 12px; height: 12px; display: block; border-radius: 50%; background: #919ba6; transition: transform .2s; }
 .toggle.on { border-color: #718b3c; background: #354923; }
@@ -335,6 +344,23 @@ tbody tr:hover { background: rgba(255,255,255,.018); }
 .review-form .button { min-height: 37px; padding: 0 11px; font-size: 10px; }
 .order-detail-modal .specs p { color: #a0acb7; font-size: 10px; line-height: 1.65; }
 .order-detail-modal .accent { color: var(--accent); }
+.user-detail-modal { display: flex; flex-direction: column; gap: 20px; }
+.user-detail-heading { display: flex; align-items: center; gap: 12px; padding-bottom: 17px; border-bottom: 1px solid #293541; }
+.user-detail-heading > div { min-width: 0; flex: 1; }
+.user-detail-heading h3 { margin: 0 0 4px; color: var(--text); font: 600 16px var(--heading); }
+.user-detail-heading > div > span { overflow-wrap: anywhere; color: #8996a3; font-size: 10px; }
+.user-detail-avatar { width: 42px; height: 42px; font-size: 16px; }
+.user-detail-fields { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+.user-detail-fields > div { min-width: 0; padding: 11px; display: flex; flex-direction: column; gap: 6px; border: 1px solid #293643; border-radius: 5px; background: #121b25; }
+.user-detail-fields span { color: #7f8d9b; font: 9px var(--mono); text-transform: uppercase; }
+.user-detail-fields b { overflow-wrap: anywhere; color: #dce4e9; font-size: 10px; }
+.user-addresses { padding-top: 16px; border-top: 1px solid #293541; }
+.user-addresses .subsection-title { margin-bottom: 12px; }
+.address-count { min-width: 23px; height: 23px; display: grid; place-items: center; border: 1px solid #394832; border-radius: 50%; color: var(--accent); font: 10px var(--mono); }
+.user-address-card { margin-top: 8px; padding: 12px; border: 1px solid #2a3743; border-radius: 5px; background: #121b25; }
+.user-address-title { display: flex; justify-content: space-between; align-items: center; gap: 10px; color: #e4e9ed; font-size: 11px; }
+.user-address-card p { margin: 7px 0 0; color: #98a5b0; font-size: 10px; line-height: 1.6; }
+.muted-copy { color: #85929f; font-size: 10px; }
 .stack-form { gap: 14px; }
 .notice { position: fixed; z-index: 80; top: 24px; right: 24px; max-width: min(420px, calc(100vw - 40px)); padding: 12px 14px; display: flex; align-items: center; gap: 14px; border: 1px solid #536a34; border-radius: 6px; color: #e7f2ce; background: #1b2718; box-shadow: 0 14px 45px #0008; font-size: 11px; animation: notice-in .2s ease-out; }
 .notice .icon-button { width: 25px; height: 25px; }
@@ -404,6 +430,9 @@ tbody tr:hover { background: rgba(255,255,255,.018); }
   .modal { max-height: calc(100vh - 20px); padding: 16px; }
   .product-detail { grid-template-columns: 1fr; gap: 15px; }
   .detail-visual { min-height: 210px; max-height: 260px; }
+  .user-detail-fields { grid-template-columns: 1fr; }
+  .user-detail-heading { flex-wrap: wrap; }
+  .user-detail-heading .status-badge { margin-left: auto; }
   .review-form { grid-template-columns: 1fr 1fr; }
   .review-form label:nth-child(2) { grid-column: span 2; }
   .review-form .button { grid-column: span 2; }
@@ -421,6 +450,8 @@ tbody tr:hover { background: rgba(255,255,255,.018); }
   .add-button { width: 27px; height: 27px; }
   .form-grid { grid-template-columns: 1fr; }
   .span-2 { grid-column: auto; }
+  .product-field-row { grid-template-columns: 1fr 1fr; }
+  .remove-field-button { grid-column: 2; justify-self: end; }
   .payment-options { grid-template-columns: 1fr; }
   .account-heading { flex-wrap: wrap; }
   .account-heading > .button { flex-basis: 100%; }

@@ -173,6 +173,18 @@ exports.getAll = asyncHandler(async (req, res) => {
   res.json({ success: true, ...pageMeta(total, page, limit), count: orders.length, data: orders });
 });
 
+// GET /api/orders/summary (admin)
+exports.getSummary = asyncHandler(async (req, res) => {
+  const [summary] = await Order.aggregate([
+    { $match: { paymentStatus: 'paid' } },
+    { $group: { _id: null, revenue: { $sum: '$totalPrice' }, paidOrderCount: { $sum: 1 } } }
+  ]);
+  res.json({
+    success: true,
+    data: { revenue: summary?.revenue || 0, paidOrderCount: summary?.paidOrderCount || 0 }
+  });
+});
+
 // PATCH /api/orders/:id/status  { status }  (admin)
 exports.updateStatus = asyncHandler(async (req, res) => {
   const next = asString(req.body.status);

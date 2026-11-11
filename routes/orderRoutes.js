@@ -9,6 +9,7 @@ router.route('/')
   .get(authorize('admin'), order.getAll);
 
 router.get('/my', order.getMyOrders); // phải khai báo trước '/:id'
+router.get('/summary', authorize('admin'), order.getSummary);
 
 router.get('/:id', order.getOne);
 router.patch('/:id/cancel', order.cancel);
